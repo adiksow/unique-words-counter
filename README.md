@@ -35,6 +35,16 @@ cmake --build .
 ./uwc ../test_data/test_1.txt
 ```
 
+### Testing
+
+For manual testing you can generate large file based on small examples with previously known number of unique words.
+
+* On **Linux** you can use next commands and **words.txt** with unique words:
+
+```bash
+cd test_data
+shuf -r -n 1000000000  words.txt -o large_data.txt
+```
 ## Authors
 
 * **Andrii Dubyk** - [@andrewDubyk](https://github.com/andrewDubyk)
