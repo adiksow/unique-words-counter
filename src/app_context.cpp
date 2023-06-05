@@ -15,6 +15,8 @@
 #include <filesystem>
 #include <cmath>
 
+constexpr unsigned long DEFAULT_CHUNK_SIZE = 100000000;
+
 bool AppContext::initialize()
 {
     if (isInitialized_)
@@ -32,7 +34,7 @@ bool AppContext::initialize()
     if (!chunkSize_)
     {
         // Use default chunk size in bytes (100MB)
-        chunkSize_ = 100000000;
+        chunkSize_ = DEFAULT_CHUNK_SIZE;
     }
 
     std::cout << "Input file : \"" << filePath_ << "\"\n"
