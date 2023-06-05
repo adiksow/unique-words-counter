@@ -45,6 +45,26 @@ For manual testing you can generate large file based on small examples with prev
 cd test_data
 shuf -r -n 1000000000  words.txt -o large_data.txt
 ```
+
+### Performance
+
+Example 
+
+* **AMD Ryzen 5 4500U with Radeon Graphics 16GB RAM**, input file 8.3 GB
+
+```bash
+$ time ./uwc ../test_data/large_data.txt
+Input file : "../test_data/large_data.txt"
+Chunk size : 100000000 bytes (100 MB)
+File size : 8333382512 bytes (8333.38 MB)
+Number of chunks : 84
+Number of unique words: 12
+
+real    0m46,338s
+user    4m19,445s
+sys     0m9,637s
+```
+
 ## Authors
 
 * **Andrii Dubyk** - [@andrewDubyk](https://github.com/andrewDubyk)
